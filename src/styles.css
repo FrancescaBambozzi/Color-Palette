@@ -146,3 +146,22 @@ ul li {
 .selected-color.already-in-palette .heart {
   fill: red;
 }
+
+@media only screen and (max-width: 768px) {
+  .color-options-row {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .color-options {
+    height: 250px;
+    width: 250px;
+  }
+
+  .selected-color {
+    width: 250px;
+    height: 250px;
+  }
+}
