@@ -6,7 +6,7 @@ class App extends Component {
   state = { selectedColor: "blue", palette: [] };
   selectColor = (color) => this.setState({ selectedColor: color });
   addToPalette = (color) => {
-    if (!this.state.palette.includes(color)) {
+    if (!this.state.palette.includes(color) && this.state.palette.length < 5) {
       const newPalette = this.state.palette.concat(color);
       this.setState({ palette: newPalette });
     }
