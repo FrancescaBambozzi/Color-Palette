@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand&display=swap");
 
 body {
- background-color: #ffebef;
+  background-color: #ffebef;
 }
 
 .App {
@@ -64,6 +64,7 @@ ul li {
 .color-options-row {
   display: flex;
   justify-content: center;
+  margin: 60px 0;
 }
 
 /* Customize scroll bar */
@@ -101,6 +102,10 @@ ul li {
   background-size: cover;
 }
 
+.color-options {
+  height: 250px;
+  width: 250px;
+}
 
 .color-option {
   padding: 5px;
@@ -126,8 +131,8 @@ ul li {
 
 .selected-color {
   display: inline-flex;
-  width: 400px;
-  height: 400px;
+  width: 260px;
+  height: 260px;
   border-radius: 10px;
   margin: 20px;
   align-items: center;
@@ -153,15 +158,5 @@ ul li {
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-  }
-
-  .color-options {
-    height: 250px;
-    width: 250px;
-  }
-
-  .selected-color {
-    width: 250px;
-    height: 250px;
   }
 }
