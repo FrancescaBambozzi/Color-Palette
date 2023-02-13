@@ -6,7 +6,7 @@ const PaletteColor = (props) => (
       className="palette-color-preview"
       style={{ backgroundColor: props.color }}
     />
-    <div>
+    <div class="color-name">
       {props.color}
       <span
         onClick={() => props.removeFromPalette(props.color)}

@@ -23,19 +23,30 @@ h2 {
 ul li {
   font-family: "Quicksand", sans-serif;
   font-size: 16px;
+  padding: 0;
 }
 
 .palette-colors {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  flex-direction: row;
+  margin: 50px;
+  padding: 0;
+}
+
+.palette-colors ul {
+  float: left;
+  list-style-type: none;
+  padding: 0;
+  display: block;
+  padding: 15px 15px 7px 15px;
+  background: rgba(0, 0, 0, 0.1);
 }
 
 .palette-color {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 20px;
+  display: block;
+  float: right;
 }
 
 .palette-color div {
@@ -45,11 +56,23 @@ ul li {
 
 .palette-color-preview {
   display: inline-block;
-  width: 50px;
-  height: 50px;
-  border-radius: 50px;
-  margin-bottom: 10px;
-  box-shadow: 1px 1px 1px black;
+  height: 70px;
+  width: 70px;
+}
+
+
+.palette-color-preview:hover,
+.palette-color-preview:focus {
+  transform: scale(1.2);
+}
+
+.color-name {
+  display: none;
+}
+
+.color-name:hover {
+  display: block;
+  transform: scale(1.2);
 }
 
 .remove-from-palette {
