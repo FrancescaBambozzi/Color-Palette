@@ -13,12 +13,13 @@ body {
 /* TYPOGRAPHY */
 h1 {
   font-family: "Pacifico", cursive;
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 100;
 }
 
 h2 {
   font-family: "Quicksand", sans-serif;
+  font-size: 25px;
 }
 
 ul li {
@@ -41,8 +42,8 @@ ul li {
   justify-content: center;
   flex-wrap: wrap;
   flex-direction: row;
-  margin: 50px;
-  padding: 13px;
+  margin: 40px;
+  padding: 8px 8px 5px 8px;
   background-color: rgba(0, 0, 0, 0.3);
   width: flex;
 }
@@ -67,8 +68,8 @@ ul li {
 
 .palette-color-preview {
   display: inline-block;
-  height: 60px;
-  width: 60px;
+  height: 50px;
+  width: 50px;
 }
 
 
@@ -190,10 +191,20 @@ ul li {
 }
 
 @media only screen and (max-width: 768px) {
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .palette-colors {
+    margin: 30px 20px;
+  }
+
   .color-options-row {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+    margin: 30px 0;
   }
 }
