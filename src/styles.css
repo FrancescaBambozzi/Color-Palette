@@ -41,7 +41,7 @@ ul li {
   justify-content: center;
   flex-wrap: wrap;
   flex-direction: row;
-  margin: 40px;
+  margin: 30px;
   padding: 8px 8px 5px 8px;
   background-color: rgba(0, 0, 0, 0.3);
   width: flex;
@@ -96,7 +96,7 @@ ul li {
 .color-options-row {
   display: flex;
   justify-content: center;
-  margin: 60px 0;
+  margin: 10px 0;
 }
 
 /* List of CSS options */
@@ -201,6 +201,5 @@ ul li {
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    margin: 30px 0;
   }
 }
