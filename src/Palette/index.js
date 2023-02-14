@@ -10,7 +10,7 @@ const Palette = (props) => {
     />
   ));
   return (
-    <div>
+    <div className="palette-container">
       <h1>Color Palette</h1>
       <h2>Tap over the colors to generate your own color palette!</h2>
       <ul className="palette-colors">{palette}</ul>
