@@ -29,7 +29,6 @@ ul li {
 }
 
 /* GENERATED PALETTE SECTION */
-
 .palette-container {
   display: flex;
   flex-flow: column nowrap;
@@ -66,6 +65,11 @@ ul li {
   font-size: 16px;
 }
 
+/* Hide the label initially */
+.hide {
+  display: none;
+}
+
 .palette-color-preview {
   display: inline-block;
   height: 50px;
@@ -73,26 +77,18 @@ ul li {
 }
 
 
-.palette-color-preview:hover,
-.palette-color-preview:focus {
+.palette-color:hover .hide {
   transform: scale(1.2);
-}
-
-.hide {
-  display: none;
-}
-
-.color-name:hover {
   display: block;
-  transform: scale(1.2);
+  margin: 2px;
 }
 
 .remove-from-palette {
   font-size: 10px;
+  font-weight: 600;
   padding: 2px;
-  margin-left: 5px;
-  border-radius: 50px;
-  color: grey;
+  margin-left: 2px;
+  color: #000;
   cursor: pointer;
 }
 
