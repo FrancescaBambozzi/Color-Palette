@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { getEffectiveTypeParameterDeclarations } from "typescript";
 import CssOptions from "./CssOptions";
 import Palette from "./Palette";
 
@@ -12,6 +13,10 @@ class App extends Component {
     }
 
     if (this.state.palette.length >= 5) {
+      //show "max options selected" message
+      const popup = document.getElementById("popup");
+      popup.style.display = "block";
+      console.log(popup)
       console.log("Limit Reached")
     }
   };
@@ -28,6 +33,7 @@ class App extends Component {
           palette={this.state.palette}
           removeFromPalette={this.removeFromPalette}
         />
+        <div id="popup" className="hide">MAX 5 OPTIONS!</div>
         <CssOptions
           palette={this.state.palette}
           addToPalette={this.addToPalette}
