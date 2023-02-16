@@ -1,5 +1,6 @@
 import React from "react";
 import PaletteColor from "./PaletteColor.js";
+import Heart from "../CssOptions/Heart.js";
 
 const Palette = (props) => {
   const palette = props.palette.map((color) => (

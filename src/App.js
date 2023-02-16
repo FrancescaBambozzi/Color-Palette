@@ -4,7 +4,7 @@ import CssOptions from "./CssOptions";
 import Palette from "./Palette";
 
 class App extends Component {
-  state = { selectedColor: "blue", palette: ["blue"] };
+  state = { selectedColor: "blue", palette: ["blue"]};
   selectColor = (color) => this.setState({ selectedColor: color });
   addToPalette = (color) => {
     if (!this.state.palette.includes(color) && this.state.palette.length < 5) {
@@ -16,8 +16,6 @@ class App extends Component {
       //show "max options selected" message
       const popup = document.getElementById("popup");
       popup.style.display = "block";
-      console.log(popup)
-      console.log("Limit Reached")
     }
   };
   removeFromPalette = (color) => {
@@ -26,6 +24,7 @@ class App extends Component {
     );
     this.setState({ palette: newPalette });
   };
+  
   render() {
     return (
       <div className="App">
@@ -33,7 +32,9 @@ class App extends Component {
           palette={this.state.palette}
           removeFromPalette={this.removeFromPalette}
         />
-        <div id="popup" className="hide">MAX 5 OPTIONS!</div>
+        <div id="popup" className="hide">
+          MAX 5 OPTIONS!
+        </div>
         <CssOptions
           palette={this.state.palette}
           addToPalette={this.addToPalette}

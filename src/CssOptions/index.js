@@ -4,9 +4,23 @@ import SelectedCssOption from "./SelectedCssOption.js";
 
 const CssOptions = (props) => (
   <div>
-    <button onClick={function (e) {
-      window.location.reload();
-    }}>NEW PALETTE</button>
+    <div className="buttons-container">
+      <button className="button"
+        onClick={function (e) {
+          window.location.reload();
+        }}
+      >
+        NEW PALETTE
+      </button>
+      <button
+        className="button save-palette"
+        onClick={function (palette) {
+          console.log(props.palette)
+        }}
+      >
+        SAVE PALETTE
+      </button>
+    </div>
     <h2>CSS Color Options</h2>
     <div className="color-options-row">
       <CssOptionsList selectColor={props.selectColor} />

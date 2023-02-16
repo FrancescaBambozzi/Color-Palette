@@ -88,9 +88,9 @@ ul li {
   width: 50px;
 }
 
-
 .palette-color:hover .hide {
   transform: scale(1.2);
+  font-size: 16px;
   display: block;
   margin: 2px;
 }
@@ -105,6 +105,10 @@ ul li {
 }
 
 /* CSS COLOR OPTIONS SECTION */
+.button {
+  margin: 5px;
+}
+
 .color-options-row {
   display: flex;
   justify-content: center;
@@ -197,6 +201,7 @@ ul li {
 .selected-color.already-in-palette .heart {
   fill: red;
 }
+
 
 @media only screen and (max-width: 768px) {
 
