@@ -124,18 +124,25 @@ ul li {
   transform: rotateZ(720deg);
 }
 
-.save-palette:hover {
-  background-color: red;
-  color: #fff;
+.save-palette {
+  fill: #000;
 }
 
+.save-palette:hover {
+  fill: red;
+}
+
+#saved-palette {
+  display: none;
+}
+
+/* List of CSS options */
 .color-options-row {
   display: flex;
   justify-content: center;
   margin: 10px 0;
 }
 
-/* List of CSS options */
 .color-options {
   display: inline-block;
   max-height: 200px;
