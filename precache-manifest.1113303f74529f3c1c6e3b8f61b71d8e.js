@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "0c373cb3ff0f49c6b76c",
-    "url": "/Color-Palette/static/css/main.fdb0aaa9.chunk.css"
+    "revision": "29bdd2a7bafd961313b9",
+    "url": "/Color-Palette/static/css/main.054d140e.chunk.css"
   },
   {
-    "revision": "0c373cb3ff0f49c6b76c",
-    "url": "/Color-Palette/static/js/main.79364fff.chunk.js"
+    "revision": "29bdd2a7bafd961313b9",
+    "url": "/Color-Palette/static/js/main.202afe6c.chunk.js"
   },
   {
     "revision": "576c53424ba2a0cb3703",
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/Color-Palette/static/media/colors-unsplash.c731d143.jpg"
   },
   {
-    "revision": "f53c4d513194e3452fb79592e584666e",
+    "revision": "68a6b785be4c6a8738571b707c4bd0a7",
     "url": "/Color-Palette/index.html"
   }
 ];
