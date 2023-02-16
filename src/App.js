@@ -3,9 +3,9 @@ import { getEffectiveTypeParameterDeclarations } from "typescript";
 import CssOptions from "./CssOptions";
 import Palette from "./Palette";
 import Buttons from "./Palette/Buttons";
-
+import GeneratedPalette from "./Palette/GeneratedPalette";
 class App extends Component {
-  state = { selectedColor: "blue", palette: ["blue"] };
+  state = { selectedColor: "blue", palette: ["blue"], savePalette: false };
   selectColor = (color) => this.setState({ selectedColor: color });
   addToPalette = (color) => {
     if (!this.state.palette.includes(color) && this.state.palette.length < 5) {
@@ -26,8 +26,11 @@ class App extends Component {
     this.setState({ palette: newPalette });
   };
 
-  savePalette = () => {
+  savePalette = (bool) => {
     console.log(this.state);
+    this.setState({
+      savePalette: bool,
+    });
   };
 
   render() {
@@ -47,6 +50,9 @@ class App extends Component {
           selectColor={this.selectColor}
           selectedColor={this.state.selectedColor}
         />
+        {this.state.savePalette && (
+          <GeneratedPalette palette={this.state.palette} removeFromPalette={this.removeFromPalette}/>
+        )}
       </div>
     );
   }
