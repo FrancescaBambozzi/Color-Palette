@@ -5,7 +5,7 @@ import Palette from "./Palette";
 import Buttons from "./Palette/Buttons";
 import GeneratedPalette from "./Palette/GeneratedPalette";
 class App extends Component {
-  state = { selectedColor: "blue", palette: ["blue"], savePalette: false };
+  state = { selectedColor: "blue", palette: ["blue"], savedPalette: [], showSavedPalette: false };
   selectColor = (color) => this.setState({ selectedColor: color });
   addToPalette = (color) => {
     if (!this.state.palette.includes(color) && this.state.palette.length < 5) {
@@ -26,11 +26,14 @@ class App extends Component {
     this.setState({ palette: newPalette });
   };
 
-  savePalette = (bool) => {
-    console.log(this.state);
+  showSavedPalette = (bool) => {
+
     this.setState({
-      savePalette: bool,
+      showSavedPalette: bool,
+      savedPalette: this.state.palette
     });
+    
+    console.log(this.state);
   };
 
   render() {
@@ -43,15 +46,18 @@ class App extends Component {
         <div id="popup" className="hide">
           MAX 5 OPTIONS!
         </div>
-        <Buttons savePalette={this.savePalette} />
+        <Buttons showSavedPalette={this.showSavedPalette} />
         <CssOptions
           palette={this.state.palette}
           addToPalette={this.addToPalette}
           selectColor={this.selectColor}
           selectedColor={this.state.selectedColor}
         />
-        {this.state.savePalette && (
-          <GeneratedPalette palette={this.state.palette} removeFromPalette={this.removeFromPalette}/>
+        {this.state.showSavedPalette && (
+          <GeneratedPalette
+            palette={this.state.savedPalette}
+            removeFromPalette={this.removeFromPalette}
+          />
         )}
       </div>
     );

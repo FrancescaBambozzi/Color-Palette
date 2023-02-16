@@ -15,7 +15,7 @@ const Buttons = (props) => {
       </IoMdRefreshCircle>
       <TiHeart
         className="icon save-palette"
-        onClick={() => props.savePalette(true)}
+        onClick={() => props.showSavedPalette(true)}
       >
         SAVE PALETTE
       </TiHeart>
