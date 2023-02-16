@@ -1,25 +1,28 @@
 import React from "react";
 import CssOptionsList from "./CssOptionsList.js";
 import SelectedCssOption from "./SelectedCssOption.js";
+import PaletteColor from "../Palette/PaletteColor.js";
+import { IoMdRefreshCircle } from 'react-icons/io';
+import { TiHeartOutline } from 'react-icons/ti';
 
 const CssOptions = (props) => (
   <div>
     <div className="buttons-container">
-      <button className="button"
+      <IoMdRefreshCircle className="icon"
         onClick={function (e) {
           window.location.reload();
         }}
       >
         NEW PALETTE
-      </button>
-      <button
-        className="button save-palette"
+      </IoMdRefreshCircle>
+      <TiHeartOutline
+        className="icon save-palette"
         onClick={function (palette) {
           console.log(props.palette)
         }}
       >
         SAVE PALETTE
-      </button>
+      </TiHeartOutline>
     </div>
     <h2>CSS Color Options</h2>
     <div className="color-options-row">

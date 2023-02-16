@@ -84,8 +84,8 @@ ul li {
 
 .palette-color-preview {
   display: inline-block;
-  height: 50px;
-  width: 50px;
+  height: 55px;
+  width: 55px;
 }
 
 .palette-color:hover .hide {
@@ -105,8 +105,28 @@ ul li {
 }
 
 /* CSS COLOR OPTIONS SECTION */
-.button {
-  margin: 5px;
+.icon {
+  height: 30px;
+  width: 30px;
+  margin: 5px 10px;
+  position: relative;
+  transition: 200ms;
+  border-radius: 50%;
+}
+
+.icon:hover {
+  background-color: #fff;
+  color: #000;
+  height: 35px;
+  width: 35px;
+  -webkit-transform: rotateZ(720deg);
+  -moz-transform: rotateZ(720deg);
+  transform: rotateZ(720deg);
+}
+
+.save-palette:hover {
+  background-color: red;
+  color: #fff;
 }
 
 .color-options-row {
